@@ -15,7 +15,7 @@ namespace Yarn
         static std::shared_ptr<IType> Boolean();
         static std::shared_ptr<IType> Any();
 
-        static const std::shared_ptr<IType> TypeMappings(std::type_index type);
+        static std::shared_ptr<IType> TypeMappings(std::type_index type);
 
         inline static const std::vector<std::function<std::shared_ptr<IType>()>> AllBuiltinTypes{
             Undefined,

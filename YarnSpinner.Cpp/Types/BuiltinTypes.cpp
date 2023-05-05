@@ -34,35 +34,35 @@ std::shared_ptr<Yarn::IType> Yarn::BuiltinTypes::Any()
     return instance;
 }
 
-const std::shared_ptr<Yarn::IType> Yarn::BuiltinTypes::TypeMappings(std::type_index type)
+std::shared_ptr<Yarn::IType> Yarn::BuiltinTypes::TypeMappings(std::type_index type)
 {
-    switch (type)
-    {
-    case typeid(std::string):
-        return String();
-    case typeid(bool):
-        return Boolean();
-    case typeid(int):
-    case typeid(unsigned int):
-    case typeid(float):
-    case typeid(double):
-    case typeid(std::byte):
-    case typeid(char):
-    case typeid(unsigned char):
-    case typeid(short):
-    case typeid(unsigned short):
-    case typeid(long):
-    case typeid(unsigned long):
-    case typeid(int8_t):    
-    case typeid(uint8_t):    
-    case typeid(int16_t):    
-    case typeid(uint16_t):    
-    case typeid(int32_t):    
-    case typeid(uint32_t):    
-    case typeid(int64_t):    
-    case typeid(uint64_t):    
-        return Number();
-    default:
-        return Any();
-    }
+    static std::map<std::type_index, std::function<std::shared_ptr<IType>()>> typeMap{
+        { typeid(std::string), String },
+        { typeid(bool), Boolean },
+        { typeid(int), Number },
+        { typeid(unsigned int), Number },
+        { typeid(float), Number },
+        { typeid(double), Number },
+        { typeid(std::byte), Number },
+        { typeid(char), Number },
+        { typeid(unsigned char), Number },
+        { typeid(short), Number },
+        { typeid(unsigned short), Number },
+        { typeid(long), Number },
+        { typeid(unsigned long), Number },
+        { typeid(int8_t), Number },
+        { typeid(uint8_t), Number },
+        { typeid(int16_t), Number },
+        { typeid(uint16_t), Number },
+        { typeid(int32_t), Number },
+        { typeid(uint32_t), Number },
+        { typeid(int64_t), Number },
+        { typeid(uint64_t), Number },
+    };
+
+    std::function typeFunc = Any;
+    if(typeMap.find(type) != typeMap.end())
+        typeFunc = typeMap[type];
+
+    return typeFunc();
 }
