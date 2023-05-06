@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageServer.Tests", "Yar
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YarnSpinner.Cpp", "YarnSpinner.Cpp\YarnSpinner.Cpp.vcxproj", "{A2B5B55A-1A61-483D-BF15-BA6A0C047D81}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YarnSpinner.Cpp.Tests", "YarnSpinner.Cpp.Tests\YarnSpinner.Cpp.Tests.vcxproj", "{667CF597-78A9-4DD3-9667-9E72E3126CF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -112,5 +114,17 @@ Global
 		{A2B5B55A-1A61-483D-BF15-BA6A0C047D81}.Release|x64.Build.0 = Release|x64
 		{A2B5B55A-1A61-483D-BF15-BA6A0C047D81}.Release|x86.ActiveCfg = Release|Win32
 		{A2B5B55A-1A61-483D-BF15-BA6A0C047D81}.Release|x86.Build.0 = Release|Win32
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Debug|Any CPU.Build.0 = Debug|Win32
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Debug|x64.ActiveCfg = Debug|x64
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Debug|x64.Build.0 = Debug|x64
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Debug|x86.ActiveCfg = Debug|Win32
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Debug|x86.Build.0 = Debug|Win32
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Release|Any CPU.ActiveCfg = Release|Win32
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Release|Any CPU.Build.0 = Release|Win32
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Release|x64.ActiveCfg = Release|x64
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Release|x64.Build.0 = Release|x64
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Release|x86.ActiveCfg = Release|Win32
+		{667CF597-78A9-4DD3-9667-9E72E3126CF7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 EndGlobal

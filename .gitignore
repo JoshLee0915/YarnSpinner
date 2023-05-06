@@ -178,3 +178,5 @@ Release
 *.vbproj.user
 ipch
 *sdf
+
+packages
