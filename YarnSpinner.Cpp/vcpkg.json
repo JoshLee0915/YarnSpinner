@@ -1,0 +1,11 @@
+{
+  "name": "yarn-spinner",
+  "version": "2.3.0",
+  "dependencies": [
+    {
+      "name": "protobuf",
+      "version>=": "3.21.12"
+    }
+  ],
+  "builtin-baseline": "6a3dd0874f153f8b375ec26210ea6d41dee3bb26"
+}
